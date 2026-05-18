@@ -10,14 +10,13 @@
 </head>
 <body>
   <header class="app-header">
-    <a class="back-btn" href="perfil-pets.html">‹</a>
-    <img src="https://img.icons8.com/ios-filled/24/menu--v1.png" alt="Menu">
+    <a class="back-btn" href="perfil-pets.html" aria-label="Voltar">‹</a>
     <h1>Adi Pet (+)</h1>
   </header>
 
   <main>
-    <h2 style="padding:0 1.25rem; color:var(--cor-texto-leve); font-size:0.95rem;">Pré-visualização</h2>
-    <div style="padding:0 1.25rem 1rem 1.25rem;">
+    <h2 class="section-title">Pré-visualização</h2>
+    <div class="container-pad--tight">
       <div class="walker-card">
         <div class="walker-left">
           <div class="avatar-wrap">
@@ -32,41 +31,41 @@
       </div>
     </div>
 
-    <div style="padding:0 1.25rem;">
+    <div class="container-pad--tight">
       <label>Nome:</label><br>
-      <input type="text" value="Mel" style="width:100%;padding:0.6rem;border-radius:0.5rem;border:0.0625rem solid rgba(0,0,0,0.06);"><br><br>
+      <input class="form-control" type="text" value="Mel"><br><br>
 
       <label>Espécie:</label><br>
-      <select style="width:100%;padding:0.6rem;border-radius:0.5rem;border:0.0625rem solid rgba(0,0,0,0.06);">
+      <select class="form-control">
         <option>Cachorro</option>
         <option>Gato</option>
         <option>Outro</option>
       </select><br><br>
 
       <label>Raça:</label><br>
-      <input type="text" value="Border Collie" style="width:100%;padding:0.6rem;border-radius:0.5rem;border:0.0625rem solid rgba(0,0,0,0.06);"><br><br>
+      <input class="form-control" type="text" value="Border Collie"><br><br>
 
       <label>Porte:</label><br>
-      <select style="width:100%;padding:0.6rem;border-radius:0.5rem;border:0.0625rem solid rgba(0,0,0,0.06);">
+      <select class="form-control">
         <option>Pequeno</option>
         <option selected>Médio</option>
         <option>Grande</option>
       </select><br><br>
 
       <label>Cor/Pelagem:</label><br>
-      <input type="text" value="Preto e Branco" style="width:100%;padding:0.6rem;border-radius:0.5rem;border:0.0625rem solid rgba(0,0,0,0.06);"><br><br>
+      <input class="form-control" type="text" value="Preto e Branco"><br><br>
 
       <label>Comportamento:</label><br>
-      <select style="width:100%;padding:0.6rem;border-radius:0.5rem;border:0.0625rem solid rgba(0,0,0,0.06);">
+      <select class="form-control">
         <option>Agitado</option>
         <option selected>Amigável</option>
         <option>Tímido</option>
       </select><br><br>
 
       <label>Idade:</label><br>
-      <input type="text" value="4 anos" style="width:100%;padding:0.6rem;border-radius:0.5rem;border:0.0625rem solid rgba(0,0,0,0.06);"><br><br>
+      <input class="form-control" type="text" value="4 anos"><br><br>
 
-      <div style="display:flex;gap:0.75rem;">
+      <div class="action-row">
         <a class="btn primary" href="perfil-pet.html">Salvar Pet</a>
         <a class="btn" href="perfil-pets.html">Cancelar</a>
       </div>
