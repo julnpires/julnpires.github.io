@@ -3,43 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>PetWalk - Carla</title>
 </head>
 <body>
-  <header>
-    <a href="buscar-walkers.html">‹ Voltar</a>
+  <header class="app-header">
+    <a class="back-btn" href="buscar-walkers.html">‹</a>
     <img src="https://img.icons8.com/ios-filled/24/menu--v1.png" alt="Menu">
     <h1>Carla (Andadora)</h1>
   </header>
 
   <main>
-    <p>★★★★★ - 127 passeios - 2km de você</p>
-    <p>Descrição: Amo animais e tenho 3 anos de experiência como dog walker.</p>
-    <p>Verificada: Sim | Seguro: Ativo</p>
-    <p>Aceita: Cães pequenos e médios</p>
-    <p>Preço: R$35/passeio</p>
+    <a class="card-link" href="horarios.html">
+      <div class="walker-card">
+        <div class="walker-left">
+          <div class="avatar-wrap">
+            <img class="avatar" src="img/avatar1.svg" alt="Carla">
+            <span class="status-dot" aria-hidden="true"></span>
+          </div>
+          <div class="walker-info">
+            <div class="walker-name">Carla <span class="small">★★★★★ · 2km</span></div>
+            <div class="verified">127 passeios · Verificada</div>
+          </div>
+        </div>
+        <div class="price">R$35</div>
+      </div>
+    </a>
 
-    <h2>Horários disponíveis</h2>
-    <a href="horarios.html">08:00</a> |
-    <a href="horarios.html">09:00</a> |
-    10:00 (indisponível) |
-    <a href="horarios.html">11:00</a> |
-    <a href="horarios.html">13:00</a> |
-    <a href="horarios.html">14:00</a> |
-    <a href="horarios.html">15:00</a> |
-    <a href="horarios.html">16:00</a>
-    <br><br>
+    <div class="container-pad section details-section">
+      <p><strong>Descrição:</strong> Amo animais e tenho 3 anos de experiência como dog walker.</p>
+      <p><strong>Aceita:</strong> Cães pequenos e médios</p>
+      <h2 class="section-title">Horários disponíveis</h2>
+      <div class="time-list" aria-label="Horários disponíveis">
+        <a class="time-chip" href="horarios.html">08:00</a>
+        <a class="time-chip" href="horarios.html">09:00</a>
+        <span class="time-chip unavailable">10:00</span>
+        <a class="time-chip" href="horarios.html">11:00</a>
+        <a class="time-chip" href="horarios.html">13:00</a>
+        <a class="time-chip" href="horarios.html">14:00</a>
+        <a class="time-chip" href="horarios.html">15:00</a>
+        <a class="time-chip" href="horarios.html">16:00</a>
+      </div>
 
-    <a href="horarios.html">Selecionar Horário</a><br>
-    <a href="conversas.html">Enviar Mensagem</a>
+      <div class="action-row">
+        <a class="btn primary" href="horarios.html">Selecionar Horário</a>
+        <a class="btn" href="conversas.html">Enviar Mensagem</a>
+      </div>
+    </div>
   </main>
 
-  <nav>
-    <a href="perfil-pets.html">Configuração</a> |
-    <a href="buscar-walkers.html">Buscar</a> |
-    <a href="index.html">Início</a> |
-    <a href="conversas.html">Conversas</a> |
-    <a href="perfil-pets.html">Perfil</a>
+  <nav class="bottom-nav">
+    <a class="nav-item" href="perfil-pets.html">Configuração</a>
+    <a class="nav-item active" href="buscar-walkers.html">Buscar</a>
+    <a class="nav-item" href="index.html">Início</a>
+    <a class="nav-item" href="conversas.html">Conversas</a>
+    <a class="nav-item" href="perfil-pets.html">Perfil</a>
   </nav>
 </body>
 </html>

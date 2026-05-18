@@ -3,34 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>PetWalk - Reserva Confirmada</title>
 </head>
 <body>
-  <header>
-    <a href="index.html">‹ Voltar</a>
+  <header class="app-header">
+    <a class="back-btn" href="index.html">‹</a>
     <img src="https://img.icons8.com/ios-filled/24/menu--v1.png" alt="Menu">
     <h1>Confirmação</h1>
   </header>
 
   <main>
-    <h2>Reserva Confirmada!</h2>
-    <p>Passeadora: Carla - ★★★★★</p>
-    <p>Pet: Mel</p>
-    <p>Horário: 14:00 — 15:00</p>
-    <p>Total pago: R$ 38,50</p>
+    <div class="container-pad">
+      <div class="walker-card">
+        <div class="walker-left">
+          <div class="avatar-wrap"><img class="avatar" src="img/avatar1.svg" alt="Carla"></div>
+          <div class="walker-info"><div class="walker-name">Carla <span class="small">★★★★★</span></div><div class="verified">Passeadora</div></div>
+        </div>
+        <div class="price">R$35</div>
+      </div>
 
-    <p>Envie orientações importantes à Carla pela conversa!</p>
+      <section class="details-section">
+        <h3>Reserva Confirmada!</h3>
+        <div class="summary-card">
+          <ul class="summary-list">
+            <li class="summary-item"><span class="label">Passeadora</span><span class="value">Carla · ★★★★★</span></li>
+            <li class="summary-item"><span class="label">Pet</span><span class="value">Mel</span></li>
+            <li class="summary-item"><span class="label">Horário</span><span class="value">14:00 — 15:00</span></li>
+            <li class="summary-item"><span class="label">Total pago</span><span class="value">R$ 38,50</span></li>
+          </ul>
+        </div>
 
-    <a href="chat.html">Enviar Mensagem à Carla</a><br>
-    <a href="index.html">Voltar ao Início</a>
+        <p class="muted">Envie orientações importantes à Carla pela conversa!</p>
+
+        <div class="action-row">
+          <a class="btn primary" href="chat.html">Enviar Mensagem à Carla</a>
+          <a class="btn" href="index.html">Voltar ao Início</a>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <nav>
-    <a href="perfil-pets.html">Configuração</a> |
-    <a href="buscar-walkers.html">Buscar</a> |
-    <a href="index.html">Início</a> |
-    <a href="conversas.html">Conversas</a> |
-    <a href="perfil-pets.html">Perfil</a>
+  <nav class="bottom-nav">
+    <a class="nav-item" href="perfil-pets.html">Configuração</a>
+    <a class="nav-item" href="buscar-walkers.html">Buscar</a>
+    <a class="nav-item active" href="index.html">Início</a>
+    <a class="nav-item" href="conversas.html">Conversas</a>
+    <a class="nav-item" href="perfil-pets.html">Perfil</a>
   </nav>
 </body>
 </html>

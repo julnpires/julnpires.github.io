@@ -3,35 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>PetWalk - Perfil da Mel</title>
 </head>
 <body>
-  <header>
+  <header class="app-header">
     <a href="perfil-pets.html">‹ Voltar</a>
-    <img src="https://img.icons8.com/ios-filled/24/menu--v1.png" alt="Menu">
+    
     <h1>Perfil</h1>
   </header>
 
   <main>
-    <h2>Mel</h2>
-    <p>Espécie: Cachorro</p>
-    <p>Raça: Border Collie</p>
-    <p>Porte: Médio</p>
-    <p>Cor/Pelagem: Preto e Branco</p>
-    <p>Comportamento: Amigável</p>
-    <p>Idade: 4 anos</p>
-    <p>Observações: Precisa de guia sempre. Tem medo de fogos de artifício.</p>
+    <div class="container-pad">
+      <a class="card-link" href="adicionar-pet.html" aria-label="Editar pet">
+        <div class="walker-card">
+          <div class="walker-left">
+            <div class="avatar-wrap">
+              <img class="avatar" src="img/avatar1.svg" alt="Mel">
+            </div>
+            <div class="walker-info">
+              <div class="walker-name">Mel <span class="small">4 anos · Médio</span></div>
+              <div class="verified">Border Collie · Preto e Branco</div>
+            </div>
+          </div>
+        </div>
+      </a>
 
-    <a href="adicionar-pet.html">Editar</a><br>
-    <a href="perfil-pets.html">Voltar</a>
+      <section class="details-section">
+        <h3>Detalhes</h3>
+        <p><strong>Comportamento:</strong> Amigável</p>
+        <p><strong>Observações:</strong> Precisa de guia sempre. Tem medo de fogos de artifício.</p>
+
+        <div class="action-row">
+          <a class="btn primary" href="adicionar-pet.html">Editar</a>
+          <a class="btn" href="perfil-pets.html">Voltar</a>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <nav>
-    <a href="perfil-pets.html">Configuração</a> |
-    <a href="buscar-walkers.html">Buscar</a> |
-    <a href="index.html">Início</a> |
-    <a href="conversas.html">Conversas</a> |
-    <a href="perfil-pets.html">Perfil</a>
+  <nav class="bottom-nav">
+    <a class="nav-item" href="perfil-pets.html">Configuração</a>
+    <a class="nav-item" href="buscar-walkers.html">Buscar</a>
+    <a class="nav-item" href="index.html">Início</a>
+    <a class="nav-item" href="conversas.html">Conversas</a>
+    <a class="nav-item" href="perfil-pets.html">Perfil</a>
   </nav>
 </body>
 </html>

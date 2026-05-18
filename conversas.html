@@ -3,32 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>PetWalk - Conversas</title>
 </head>
 <body>
-  <header>
-    <a href="index.html">‹ Voltar</a>
+  <header class="app-header">
+    <a class="back-btn" href="index.html">‹</a>
     <img src="https://img.icons8.com/ios-filled/24/menu--v1.png" alt="Menu">
     <h1>Conversas</h1>
   </header>
 
   <main>
-    <ul>
-      <li><a href="chat.html">Carla - "Ok! Vou cuidar bem da Mel" - 14:02</a></li>
-      <li><a href="chat.html">Bremmuda - "Posso sim na terça!" - Ontem</a></li>
-      <li><a href="chat.html">Sabrina - "Fotos do passeio" - Antes</a></li>
-      <li><a href="chat.html">Jessiye - "Está tudo bem com o Rooki!" - Hoje</a></li>
-      <li><a href="chat.html">Alfredo - "Valeu, até a próxima!" - Seg</a></li>
-      <li><a href="chat.html">Matheus - "Pode deixar, vou levar água!" - Dom</a></li>
+    <ul class="walkers">
+      <li>
+        <a class="card-link" href="chat.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar1.svg" alt="Carla">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Carla <span class="small">14:02</span></div>
+                <div class="verified">Ok! Vou cuidar bem da Mel</div>
+              </div>
+            </div>
+            <div class="price">&nbsp;</div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="chat.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar2.svg" alt="Bremmuda">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Bremmuda <span class="small">Ontem</span></div>
+                <div class="verified">Posso sim na terça!</div>
+              </div>
+            </div>
+            <div class="price">&nbsp;</div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="chat.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar3.svg" alt="Sabrina">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Sabrina <span class="small">Antes</span></div>
+                <div class="verified">Fotos do passeio</div>
+              </div>
+            </div>
+            <div class="price">&nbsp;</div>
+          </div>
+        </a>
+      </li>
     </ul>
   </main>
 
-  <nav>
-    <a href="perfil-pets.html">Configuração</a> |
-    <a href="buscar-walkers.html">Buscar</a> |
-    <a href="index.html">Início</a> |
-    <a href="conversas.html">Conversas</a> |
-    <a href="perfil-pets.html">Perfil</a>
+  <nav class="bottom-nav">
+    <a class="nav-item" href="perfil-pets.html">Configuração</a>
+    <a class="nav-item" href="buscar-walkers.html">Buscar</a>
+    <a class="nav-item" href="index.html">Início</a>
+    <a class="nav-item active" href="conversas.html">Conversas</a>
+    <a class="nav-item" href="perfil-pets.html">Perfil</a>
   </nav>
 </body>
 </html>
