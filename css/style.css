@@ -87,7 +87,7 @@ main {
 .search {
   width: 100%;
   padding: 0.75rem 1rem;
-  border-radius: 2rem;
+  border-radius: 999rem;
   border: 0.0625rem solid var(--borda);
   background: var(--superficie);
   box-shadow: var(--sombra);
@@ -224,7 +224,7 @@ a.card-link:hover .walker-card {
   background: var(--verde-claro);
   color: var(--verde);
   padding: 0.15rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 999rem;
   font-size: 0.72rem;
   font-weight: 700;
 }
@@ -253,7 +253,7 @@ a.card-link:hover .walker-card {
   padding: 0.5rem 0.75rem;
   background: var(--superficie);
   border: 0.0625rem solid var(--borda);
-  border-radius: var(--radius-sm);
+  border-radius: 999rem;
   color: var(--verde);
   font-weight: 700;
   font-size: 0.88rem;
@@ -293,7 +293,7 @@ button.time-chip:not(.unavailable):focus {
   display: inline-block;
   text-align: center;
   padding: 0.8rem 1.25rem;
-  border-radius: 0.875rem;
+  border-radius: var(--radius);
   text-decoration: none;
   font-weight: 700;
   font-size: 0.9rem;
@@ -657,7 +657,7 @@ div.card-link:hover .walker-card { box-shadow: var(--sombra-forte); }
 .settings-label { font-weight: 700; font-size: 0.9rem; }
 .settings-desc  { font-size: 0.78rem; color: var(--texto-leve); margin-top: 0.1rem; }
 
-.settings-arrow { color: var(--texto-leve); font-size: 1.1rem; }
+.row-arrow { color: var(--texto-leve); font-size: 1rem; flex-shrink: 0; }
 
 /* ============================================================
    RESPONSIVE
