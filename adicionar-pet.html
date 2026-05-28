@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>PetWalk - Adicionar Pet</title>
+</head>
+<body>
+  <header class="app-header">
+    <a class="back-btn" href="perfil-pets.html" aria-label="Voltar">‹</a>
+    <h1>Adicionar Pet</h1>
+  </header>
+
+  <main>
+    <h2 class="section-title">Pré-visualização</h2>
+    <div class="container-pad--tight">
+      <div class="walker-card">
+        <div class="walker-left">
+          <div class="avatar-wrap">
+            <img class="avatar" src="img/avatar1.svg" alt="Preview">
+          </div>
+          <div class="walker-info">
+            <div class="walker-name">
+              <span id="prev-nome">Mel</span>
+              <span class="small" id="prev-info">4 anos · Médio</span>
+            </div>
+            <div class="verified" id="prev-sub">Border Collie · Preto e Branco</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-pad--tight">
+      <label for="pet-nome">Nome:</label><br>
+      <input id="pet-nome" class="form-control" type="text" value="Mel"><br><br>
+
+      <label for="pet-especie">Espécie:</label><br>
+      <select id="pet-especie" class="form-control">
+        <option>Cachorro</option>
+        <option>Gato</option>
+        <option>Outro</option>
+      </select><br><br>
+
+      <label for="pet-raca">Raça:</label><br>
+      <input id="pet-raca" class="form-control" type="text" value="Border Collie"><br><br>
+
+      <label for="pet-porte">Porte:</label><br>
+      <select id="pet-porte" class="form-control">
+        <option>Pequeno</option>
+        <option selected>Médio</option>
+        <option>Grande</option>
+      </select><br><br>
+
+      <label for="pet-cor">Cor/Pelagem:</label><br>
+      <input id="pet-cor" class="form-control" type="text" value="Preto e Branco"><br><br>
+
+      <label for="pet-comportamento">Comportamento:</label><br>
+      <select id="pet-comportamento" class="form-control">
+        <option>Agitado</option>
+        <option selected>Amigável</option>
+        <option>Tímido</option>
+      </select><br><br>
+
+      <label for="pet-idade">Idade:</label><br>
+      <input id="pet-idade" class="form-control" type="text" value="4 anos"><br><br>
+
+      <div class="action-row">
+        <a class="btn primary" href="perfil-pet.html">Salvar Pet</a>
+        <a class="btn" href="perfil-pets.html">Cancelar</a>
+      </div>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a class="nav-item" href="perfil-pets.html">
+      <span class="nav-icon" aria-hidden="true">⚙️</span>
+      <span>Config.</span>
+    </a>
+    <a class="nav-item" href="buscar-walkers.html">
+      <span class="nav-icon" aria-hidden="true">🔍</span>
+      <span>Buscar</span>
+    </a>
+    <a class="nav-item" href="index.html">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span>Início</span>
+    </a>
+    <a class="nav-item" href="conversas.html">
+      <span class="nav-icon" aria-hidden="true">💬</span>
+      <span>Chat</span>
+    </a>
+    <a class="nav-item active" href="perfil-pets.html">
+      <span class="nav-icon" aria-hidden="true">👤</span>
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+  <script src="js/pet-form.js" defer></script>
+</body>
+</html>
