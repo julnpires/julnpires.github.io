@@ -8,15 +8,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>PetWalk - Meus Pets</title>
+  <title>PetWalk - Perfil</title>
 </head>
 <body>
   <header class="app-header">
-    <a class="back-btn" href="index.html" aria-label="Voltar">‹</a>
     <h1>Perfil</h1>
   </header>
 
   <main>
+    <div class="profile-hero">
+      <img class="avatar-lg" src="img/avatar2.svg" alt="Juliana N.">
+      <h2>Juliana N.</h2>
+      <p>robertomb4@al.insper.edu.br</p>
+      <a class="profile-edit-btn" href="#">Editar perfil</a>
+    </div>
+
+    <h2 class="section-title">Meus pets</h2>
     <ul class="walkers">
       <li>
         <a class="card-link" href="perfil-pet.html">
@@ -26,9 +33,11 @@
                 <img class="avatar" src="img/avatar1.svg" alt="Simba">
               </div>
               <div class="walker-info">
-                <div class="walker-name">Simba <span class="small">Gato</span></div>
+                <div class="walker-name">Simba</div>
+                <div class="walker-meta">Gato · Laranja</div>
               </div>
             </div>
+            <span style="color:var(--texto-leve);font-size:1.1rem;">›</span>
           </div>
         </a>
       </li>
@@ -41,9 +50,11 @@
                 <img class="avatar" src="img/avatar2.svg" alt="Arrice">
               </div>
               <div class="walker-info">
-                <div class="walker-name">Arrice <span class="small">Cachorro</span></div>
+                <div class="walker-name">Arrice</div>
+                <div class="walker-meta">Cachorro · Golden Retriever</div>
               </div>
             </div>
+            <span style="color:var(--texto-leve);font-size:1.1rem;">›</span>
           </div>
         </a>
       </li>
@@ -56,9 +67,11 @@
                 <img class="avatar" src="img/avatar3.svg" alt="Rooki">
               </div>
               <div class="walker-info">
-                <div class="walker-name">Rooki <span class="small">Cachorro</span></div>
+                <div class="walker-name">Rooki</div>
+                <div class="walker-meta">Cachorro · Poodle</div>
               </div>
             </div>
+            <span style="color:var(--texto-leve);font-size:1.1rem;">›</span>
           </div>
         </a>
       </li>
@@ -71,9 +84,11 @@
                 <img class="avatar" src="img/avatar1.svg" alt="Nutella">
               </div>
               <div class="walker-info">
-                <div class="walker-name">Nutella <span class="small">Cachorro</span></div>
+                <div class="walker-name">Nutella</div>
+                <div class="walker-meta">Cachorro · Labrador</div>
               </div>
             </div>
+            <span style="color:var(--texto-leve);font-size:1.1rem;">›</span>
           </div>
         </a>
       </li>
@@ -83,7 +98,7 @@
   </main>
 
   <nav class="bottom-nav">
-    <a class="nav-item" href="perfil-pets.html">
+    <a class="nav-item" href="configuracoes.html">
       <span class="nav-icon" aria-hidden="true">⚙️</span>
       <span>Config.</span>
     </a>
