@@ -683,6 +683,57 @@ div.card-link:hover .walker-card { box-shadow: var(--sombra-forte); }
 .row-arrow { color: var(--texto-leve); font-size: 1rem; flex-shrink: 0; }
 
 /* ============================================================
+   TELA DE EMERGÊNCIA
+   ============================================================ */
+.emerg-header { background: #C0392B; }
+.emerg-back   { background: rgba(255,255,255,0.18); }
+
+.emerg-hero {
+  background: linear-gradient(160deg, #C0392B 0%, #E74C3C 100%);
+  padding: 1.25rem 1.25rem 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+.emerg-hero-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.92;
+  line-height: 1.6;
+}
+
+.emerg-card { border-left: 0.2rem solid transparent; }
+
+.emerg-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+.emerg-icon--red    { background: rgba(192, 57, 43, 0.1); }
+.emerg-icon--orange { background: rgba(224, 120, 72, 0.12); }
+.emerg-icon--green  { background: var(--verde-claro); }
+.emerg-icon--blue   { background: rgba(52, 120, 200, 0.1); }
+
+.emerg-call-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999rem;
+  background: rgba(192, 57, 43, 0.1);
+  color: #C0392B;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.emerg-call-badge--green {
+  background: var(--verde-claro);
+  color: var(--verde);
+}
+
+/* ============================================================
    TELA DE CONFIRMAÇÃO
    ============================================================ */
 @keyframes pop-in {
