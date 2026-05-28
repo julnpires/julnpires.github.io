@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   var campos = {
     nome:          document.getElementById('pet-nome'),
+    especie:       document.getElementById('pet-especie'),
     raca:          document.getElementById('pet-raca'),
     idade:         document.getElementById('pet-idade'),
     cor:           document.getElementById('pet-cor'),
@@ -14,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
     sub:  document.getElementById('prev-sub')
   };
 
-  /* aborta se algum elemento essencial não existir na página */
-  var todosExistem = Object.values(campos).every(Boolean) && Object.values(prev).every(Boolean);
-  if (!todosExistem) return;
+  var camposEssenciais = ['nome', 'raca', 'idade', 'cor', 'porte', 'comportamento'];
+  if (!camposEssenciais.every(function (k) { return campos[k]; })) return;
+  if (!Object.values(prev).every(Boolean)) return;
 
   function atualizar() {
     var nome  = campos.nome.value.trim()  || 'Sem nome';
@@ -37,17 +38,33 @@ document.addEventListener('DOMContentLoaded', function () {
   campos.porte.addEventListener('change', atualizar);
   campos.comportamento.addEventListener('change', atualizar);
 
-  /* validação ao salvar */
   var btnSalvar = document.getElementById('btn-salvar');
   if (btnSalvar) {
     btnSalvar.addEventListener('click', function (e) {
+      e.preventDefault();
       var nome = campos.nome.value.trim();
       if (!nome) {
-        e.preventDefault();
         campos.nome.focus();
         campos.nome.classList.add('input-erro');
         setTimeout(function () { campos.nome.classList.remove('input-erro'); }, 2000);
+        return;
       }
+
+      var pet = {
+        nome:          nome,
+        especie:       campos.especie ? campos.especie.value : 'Cachorro',
+        raca:          campos.raca.value.trim(),
+        porte:         campos.porte.value,
+        idade:         campos.idade.value.trim(),
+        cor:           campos.cor.value.trim(),
+        comportamento: campos.comportamento.value
+      };
+
+      var lista = JSON.parse(localStorage.getItem('petwalk_pets') || '[]');
+      lista.push(pet);
+      localStorage.setItem('petwalk_pets', JSON.stringify(lista));
+
+      window.location.href = 'perfil-pets.html';
     });
   }
 });
