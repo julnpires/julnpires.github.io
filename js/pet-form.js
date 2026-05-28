@@ -1,70 +1,71 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var campos = {
-    nome:          document.getElementById('pet-nome'),
-    especie:       document.getElementById('pet-especie'),
-    raca:          document.getElementById('pet-raca'),
-    idade:         document.getElementById('pet-idade'),
-    cor:           document.getElementById('pet-cor'),
-    porte:         document.getElementById('pet-porte'),
-    comportamento: document.getElementById('pet-comportamento')
-  };
 
-  var prev = {
-    nome: document.getElementById('prev-nome'),
-    info: document.getElementById('prev-info'),
-    sub:  document.getElementById('prev-sub')
-  };
-
-  var camposEssenciais = ['nome', 'raca', 'idade', 'cor', 'porte', 'comportamento'];
-  if (!camposEssenciais.every(function (k) { return campos[k]; })) return;
-  if (!Object.values(prev).every(Boolean)) return;
-
+  /* ---- preview ao vivo ---- */
   function atualizar() {
-    var nome  = campos.nome.value.trim()  || 'Sem nome';
-    var raca  = campos.raca.value.trim();
-    var idade = campos.idade.value.trim();
-    var porte = campos.porte.value;
-    var cor   = campos.cor.value.trim();
+    var nome  = (document.getElementById('pet-nome')  || {value:''}).value.trim() || 'Sem nome';
+    var raca  = (document.getElementById('pet-raca')  || {value:''}).value.trim();
+    var idade = (document.getElementById('pet-idade') || {value:''}).value.trim();
+    var porte = (document.getElementById('pet-porte') || {value:''}).value;
+    var cor   = (document.getElementById('pet-cor')   || {value:''}).value.trim();
 
-    prev.nome.textContent = nome;
-    prev.info.textContent = [idade, porte].filter(Boolean).join(' · ');
-    prev.sub.textContent  = [raca, cor].filter(Boolean).join(' · ') || '—';
+    var pNome = document.getElementById('prev-nome');
+    var pInfo = document.getElementById('prev-info');
+    var pSub  = document.getElementById('prev-sub');
+
+    if (pNome) pNome.textContent = nome;
+    if (pInfo) pInfo.textContent = [idade, porte].filter(Boolean).join(' · ');
+    if (pSub)  pSub.textContent  = [raca, cor].filter(Boolean).join(' · ') || '—';
   }
 
-  campos.nome.addEventListener('input', atualizar);
-  campos.raca.addEventListener('input', atualizar);
-  campos.idade.addEventListener('input', atualizar);
-  campos.cor.addEventListener('input', atualizar);
-  campos.porte.addEventListener('change', atualizar);
-  campos.comportamento.addEventListener('change', atualizar);
+  ['pet-nome','pet-raca','pet-idade','pet-cor'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', atualizar);
+  });
+  ['pet-porte','pet-comportamento'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('change', atualizar);
+  });
 
+  /* ---- salvar pet ---- */
   var btnSalvar = document.getElementById('btn-salvar');
-  if (btnSalvar) {
-    btnSalvar.addEventListener('click', function (e) {
-      e.preventDefault();
-      var nome = campos.nome.value.trim();
-      if (!nome) {
-        campos.nome.focus();
-        campos.nome.classList.add('input-erro');
-        setTimeout(function () { campos.nome.classList.remove('input-erro'); }, 2000);
-        return;
+  if (!btnSalvar) return;
+
+  btnSalvar.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var nomeEl = document.getElementById('pet-nome');
+    var nome   = nomeEl ? nomeEl.value.trim() : '';
+
+    if (!nome) {
+      if (nomeEl) {
+        nomeEl.focus();
+        nomeEl.classList.add('input-erro');
+        setTimeout(function () { nomeEl.classList.remove('input-erro'); }, 2000);
       }
+      return;
+    }
 
-      var pet = {
-        nome:          nome,
-        especie:       campos.especie ? campos.especie.value : 'Cachorro',
-        raca:          campos.raca.value.trim(),
-        porte:         campos.porte.value,
-        idade:         campos.idade.value.trim(),
-        cor:           campos.cor.value.trim(),
-        comportamento: campos.comportamento.value
-      };
+    var get = function (id) {
+      var el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    };
 
+    var pet = {
+      nome:          nome,
+      especie:       get('pet-especie') || 'Cachorro',
+      raca:          get('pet-raca'),
+      porte:         get('pet-porte'),
+      idade:         get('pet-idade'),
+      cor:           get('pet-cor'),
+      comportamento: get('pet-comportamento')
+    };
+
+    try {
       var lista = JSON.parse(localStorage.getItem('petwalk_pets') || '[]');
       lista.push(pet);
       localStorage.setItem('petwalk_pets', JSON.stringify(lista));
+    } catch (err) {}
 
-      window.location.href = 'perfil-pets.html';
-    });
-  }
+    window.location.href = 'perfil-pets.html';
+  });
 });
