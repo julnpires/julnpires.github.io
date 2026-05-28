@@ -11,44 +11,49 @@
   <title>PetWalk - Reserva Confirmada</title>
 </head>
 <body>
-  <header class="app-header">
-    <a class="back-btn" href="index.html" aria-label="Voltar">‹</a>
-    <h1>Confirmação</h1>
-  </header>
 
   <main>
+    <!-- Hero de confirmação -->
+    <div class="confirm-hero">
+      <div class="confirm-check">✓</div>
+      <h1 class="confirm-title">Passeio agendado!</h1>
+      <p class="confirm-sub">Carla já recebeu a sua reserva 🐾</p>
+    </div>
+
+    <!-- Detalhes da reserva -->
     <div class="container-pad">
-      <div class="walker-card">
-        <div class="walker-left">
-          <div class="avatar-wrap">
-            <img class="avatar" src="img/avatar1.svg" alt="Carla">
+      <h2 class="section-title">Resumo da reserva</h2>
+      <div class="summary-card">
+        <ul class="summary-list">
+          <li class="summary-item">
+            <span class="label">Passeadora</span>
+            <span class="value">Carla · ★★★★★</span>
+          </li>
+          <li class="summary-item">
+            <span class="label">Pet</span>
+            <span class="value">Mel</span>
+          </li>
+          <li class="summary-item">
+            <span class="label">Horário</span>
+            <span class="value">14:00 — 15:00</span>
+          </li>
+          <li class="summary-item">
+            <span class="label">Serviço</span>
+            <span class="value">Passeio · 1h</span>
+          </li>
+          <div class="summary-total">
+            <span class="label">Total pago</span>
+            <span class="value">R$ 38,50</span>
           </div>
-          <div class="walker-info">
-            <div class="walker-name">Carla <span class="small">★★★★★</span></div>
-            <div class="verified">Passeadora</div>
-          </div>
-        </div>
-        <div class="price">R$35</div>
+        </ul>
       </div>
 
-      <section class="details-section">
-        <h3>🎉 Reserva Confirmada!</h3>
-        <div class="summary-card">
-          <ul class="summary-list">
-            <li class="summary-item"><span class="label">Passeadora</span><span class="value">Carla · ★★★★★</span></li>
-            <li class="summary-item"><span class="label">Pet</span><span class="value">Mel</span></li>
-            <li class="summary-item"><span class="label">Horário</span><span class="value">14:00 — 15:00</span></li>
-            <li class="summary-item"><span class="label">Total pago</span><span class="value">R$ 38,50</span></li>
-          </ul>
-        </div>
+      <p class="confirm-hint">Envie orientações importantes à Carla antes do passeio!</p>
 
-        <p class="muted">Envie orientações importantes à Carla pela conversa!</p>
-
-        <div class="action-row">
-          <a class="btn primary" href="chat.html">Enviar Mensagem à Carla</a>
-          <a class="btn" href="index.html">Voltar ao Início</a>
-        </div>
-      </section>
+      <div class="cta-group">
+        <a class="btn primary" href="chat.html">💬 Falar com a Carla</a>
+        <a class="btn" href="index.html">Voltar ao início</a>
+      </div>
     </div>
   </main>
 

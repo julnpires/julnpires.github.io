@@ -683,6 +683,61 @@ div.card-link:hover .walker-card { box-shadow: var(--sombra-forte); }
 .row-arrow { color: var(--texto-leve); font-size: 1rem; flex-shrink: 0; }
 
 /* ============================================================
+   TELA DE CONFIRMAÇÃO
+   ============================================================ */
+@keyframes pop-in {
+  0%   { transform: scale(0.4); opacity: 0; }
+  65%  { transform: scale(1.18); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.confirm-hero {
+  background: linear-gradient(160deg, var(--verde-escuro) 0%, var(--verde) 100%);
+  padding: 3rem 1.25rem 2.5rem;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.confirm-check {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 0.2rem solid rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  animation: pop-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  margin-bottom: 0.25rem;
+}
+
+.confirm-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.confirm-sub {
+  font-size: 0.92rem;
+  opacity: 0.82;
+  font-weight: 600;
+}
+
+.confirm-hint {
+  font-size: 0.85rem;
+  color: var(--texto-leve);
+  text-align: center;
+  padding: 0.75rem 0 0.25rem;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (min-width: 48rem) {
