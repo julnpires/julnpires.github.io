@@ -161,6 +161,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   background: var(--superficie);
   border-radius: var(--radius);
   padding: 0.875rem 1rem;
@@ -256,7 +257,7 @@ a.card-link:hover .walker-card {
   border-radius: 999rem;
   color: var(--verde);
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   box-shadow: var(--sombra);
   cursor: pointer;
   font-family: inherit;
@@ -292,7 +293,7 @@ button.time-chip:not(.unavailable):focus {
 .btn {
   display: inline-block;
   text-align: center;
-  padding: 0.8rem 1.25rem;
+  padding: 0.875rem 1.25rem;
   border-radius: var(--radius);
   text-decoration: none;
   font-weight: 700;
@@ -432,7 +433,7 @@ label {
 
 .form-control {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1rem;
   border-radius: var(--radius-sm);
   border: 0.0625rem solid var(--borda);
   background: var(--superficie);
@@ -510,7 +511,7 @@ label {
   padding: 0.45rem 1rem;
   background: var(--superficie);
   border: 0.0625rem solid var(--borda);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   cursor: pointer;
   color: var(--texto-leve);
   font-family: inherit;
@@ -556,7 +557,7 @@ div.card-link:hover .walker-card { box-shadow: var(--sombra-forte); }
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  padding: 0.8rem 1.25rem;
+  padding: 0.875rem 1.25rem;
   margin: 0.25rem 1.25rem 1.25rem;
   background: var(--superficie);
   border: 0.0625rem dashed rgba(46, 125, 53, 0.45);
