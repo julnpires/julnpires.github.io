@@ -12,7 +12,7 @@
 </head>
 <body>
   <header class="app-header">
-    <h1>Buscar</h1>
+    <h1>Início</h1>
   </header>
 
   <main>
@@ -21,34 +21,36 @@
     </div>
 
     <div class="chips" role="tablist" aria-label="Filtros de serviço">
-      <button class="chip active" aria-pressed="true">🐾 Passeio</button>
-      <button class="chip" aria-pressed="false">🏠 Hospedagem</button>
-      <button class="chip" aria-pressed="false">✂️ Banho</button>
-      <button class="chip" aria-pressed="false">🩺 Vet</button>
+      <button class="chip active" data-servico="passeio" aria-pressed="true">🐾 Passeio</button>
+      <button class="chip" data-servico="hospedagem" aria-pressed="false">🏠 Hospedagem</button>
+      <button class="chip" data-servico="banho" aria-pressed="false">✂️ Banho</button>
+      <button class="chip" data-servico="vet" aria-pressed="false">🩺 Vet</button>
     </div>
 
-    <h2 class="section-title">Sugeridos para você</h2>
+    <h2 id="section-label" class="section-title">Sugeridos para você</h2>
 
-    <ul class="walkers">
-      <li>
+    <ul id="walker-list" class="walkers">
+
+      <!-- PASSEIO -->
+      <li data-servicos="passeio">
         <a class="card-link" href="detalhes-walker.html">
           <div class="walker-card">
             <div class="walker-left">
               <div class="avatar-wrap">
-                <img class="avatar" src="img/avatar1.svg" alt="Fiona A.">
+                <img class="avatar" src="img/avatar1.svg" alt="Carla">
                 <span class="status-dot" aria-hidden="true"></span>
               </div>
               <div class="walker-info">
-                <div class="walker-name">Fiona A. <span class="small">★4.9 · 2km</span></div>
+                <div class="walker-name">Carla <span class="small">★5.0 · 0.8km</span></div>
                 <div class="verified">✓ Verificada</div>
               </div>
             </div>
-            <div class="price">R$45</div>
+            <div class="price">R$35</div>
           </div>
         </a>
       </li>
 
-      <li>
+      <li data-servicos="passeio">
         <a class="card-link" href="detalhes-walker.html">
           <div class="walker-card">
             <div class="walker-left">
@@ -66,7 +68,7 @@
         </a>
       </li>
 
-      <li>
+      <li data-servicos="passeio">
         <a class="card-link" href="detalhes-walker.html">
           <div class="walker-card">
             <div class="walker-left">
@@ -83,10 +85,122 @@
           </div>
         </a>
       </li>
+
+      <!-- HOSPEDAGEM -->
+      <li data-servicos="hospedagem">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar1.svg" alt="Fiona A.">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Fiona A. <span class="small">★4.9 · 2km</span></div>
+                <div class="verified">✓ Verificada</div>
+              </div>
+            </div>
+            <div class="price">R$45/dia</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-servicos="hospedagem">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar2.svg" alt="Rodrigo B.">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Rodrigo B. <span class="small">★4.6 · 1.8km</span></div>
+                <div class="verified">✓ Verificado</div>
+              </div>
+            </div>
+            <div class="price">R$60/dia</div>
+          </div>
+        </a>
+      </li>
+
+      <!-- BANHO -->
+      <li data-servicos="banho">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar3.svg" alt="Priscila S.">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Priscila S. <span class="small">★5.0 · 0.5km</span></div>
+                <div class="verified">✓ Verificada</div>
+              </div>
+            </div>
+            <div class="price">R$50</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-servicos="banho">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar2.svg" alt="Sabrina">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Sabrina <span class="small">★4.9 · 2.0km</span></div>
+                <div class="verified">✓ Verificada</div>
+              </div>
+            </div>
+            <div class="price">R$40</div>
+          </div>
+        </a>
+      </li>
+
+      <!-- VET -->
+      <li data-servicos="vet">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar1.svg" alt="Dr. Leandro">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Dr. Leandro <span class="small">★4.8 · 1.2km</span></div>
+                <div class="verified">✓ Verificado</div>
+              </div>
+            </div>
+            <div class="price">R$120</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-servicos="vet">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar3.svg" alt="Dra. Clara">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Dra. Clara <span class="small">★4.9 · 3.1km</span></div>
+                <div class="verified">✓ Verificada</div>
+              </div>
+            </div>
+            <div class="price">R$100</div>
+          </div>
+        </a>
+      </li>
+
     </ul>
 
     <div class="cta-group">
-      <a class="btn primary" href="buscar-walkers.html">Fazer Reserva</a>
+      <a class="btn primary" href="buscar-walkers.html">Ver todos</a>
       <a class="btn danger" href="#">Emergência</a>
     </div>
   </main>
@@ -114,6 +228,6 @@
     </a>
   </nav>
 
-  <script src="js/chips.js" defer></script>
+  <script src="js/chips.js"></script>
 </body>
 </html>
