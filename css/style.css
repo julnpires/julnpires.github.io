@@ -572,6 +572,28 @@ div.card-link:hover .walker-card { box-shadow: var(--sombra-forte); }
 .btn-add:hover { background: var(--verde-claro); }
 
 /* ============================================================
+   BOTÃO DELETAR PET
+   ============================================================ */
+.btn-del-pet {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(216, 64, 64, 0.1);
+  color: #D84040;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.btn-del-pet:hover { background: rgba(216, 64, 64, 0.22); }
+
+/* ============================================================
    PROFILE HERO
    ============================================================ */
 .profile-hero {
